@@ -14,7 +14,7 @@
 }
 
 [data-theme="dark"] {
-    /* Dark mode colors */
+    
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
     --bg-grid: #2d2d2d;
@@ -211,7 +211,7 @@ body {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Tile colors with better contrast */
+
 .cell[data-value="2"] { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
 .cell[data-value="4"] { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
 .cell[data-value="8"] { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
