@@ -4,14 +4,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ff6347'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold' font-size='22' fill='white'%3E2048%3C/text%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css" />
     <title>2048</title>
 </head>
 
 <body>
+    <div class="cosmic-bg">
+        <div class="cosmic-orb cosmic-orb-1"></div>
+        <div class="cosmic-orb cosmic-orb-2"></div>
+        <div class="cosmic-orb cosmic-orb-3"></div>
+        <div class="cosmic-stars"></div>
+    </div>
+
     <div class="score-container">
-        <div>Score : <span id="current-score">0</span></div>
-        <div>High Score : <span id="high-score">0</span></div>
+        <div class="score-label">Score : <span id="current-score">0</span></div>
+        <div class="score-label">High Score : <span id="high-score">0</span></div>
     </div>
 
     <div class="game-container">
