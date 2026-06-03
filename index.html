@@ -1,54 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ff6347'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold' font-size='22' fill='white'%3E2048%3C/text%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>2048</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<body data-theme="light">
+    <div class="background"></div>
 
-<body>
-    <div class="cosmic-bg">
-        <div class="cosmic-orb cosmic-orb-1"></div>
-        <div class="cosmic-orb cosmic-orb-2"></div>
-        <div class="cosmic-orb cosmic-orb-3"></div>
-        <div class="cosmic-stars"></div>
-    </div>
-
-    <div class="score-container">
-        <div class="score-label">Score : <span id="current-score">0</span></div>
-        <div class="score-label">High Score : <span id="high-score">0</span></div>
+    <div class="header">
+        <h1 class="title">2048</h1>
+        <button class="theme-toggle" id="theme-toggle" type="button">
+            <span id="theme-icon">🌙</span>
+            <span id="theme-text">Oscuro</span>
+        </button>
     </div>
 
     <div class="game-container">
-        <div class="grid">
-            <div class="cell" data-row="0" data-col="0"></div>
-            <div class="cell" data-row="0" data-col="1"></div>
-            <div class="cell" data-row="0" data-col="2"></div>
-            <div class="cell" data-row="0" data-col="3"></div>
-            <div class="cell" data-row="1" data-col="0"></div>
-            <div class="cell" data-row="1" data-col="1"></div>
-            <div class="cell" data-row="1" data-col="2"></div>
-            <div class="cell" data-row="1" data-col="3"></div>
-            <div class="cell" data-row="2" data-col="0"></div>
-            <div class="cell" data-row="2" data-col="1"></div>
-            <div class="cell" data-row="2" data-col="2"></div>
-            <div class="cell" data-row="2" data-col="3"></div>
-            <div class="cell" data-row="3" data-col="0"></div>
-            <div class="cell" data-row="3" data-col="1"></div>
-            <div class="cell" data-row="3" data-col="2"></div>
-            <div class="cell" data-row="3" data-col="3"></div>
+        <div class="score-container">
+            <div class="score">
+                <span class="score-label">Puntuación</span>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="high-score">
+                <span class="score-label">Mejor</span>
+                <div class="score-value" id="high-score">0</div>
+            </div>
+        </div>
+
+        <div class="grid" id="grid">
+        </div>
+
+        <div class="controls">
+            <button id="restart-btn" type="button">🔄 Nuevo Juego</button>
         </div>
     </div>
 
+    <div class="instructions">
+        <p><strong>Cómo jugar:</strong> Usa las flechas del teclado o desliza en móviles<br>
+        para mover las fichas. Combina números iguales para llegar a 2048!</p>
+    </div>
+
     <div id="game-over">
-        Game Over
-        <button id="restart-btn" type="button">Restart Game</button>
+        <div class="game-over-content">
+            <h2 class="game-over-title">¡Juego Terminado!</h2>
+            <p class="game-over-score">Puntuación final: <span id="final-score">0</span></p>
+            <button id="restart-btn-gameover" type="button">🔄 Jugar de Nuevo</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
